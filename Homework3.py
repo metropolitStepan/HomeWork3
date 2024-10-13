@@ -1,16 +1,33 @@
-# This is a sample Python script.
+def warehouse():
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    food_warehouse = {}
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    while True:
+        key = input('Введите название продукта или "стоп", для завершения": ')
+        if key.lower() == 'стоп':
+            break
+        value = int(input('Введите количество продукта или "стоп", для завершения: '))
+        food_warehouse[key] = value
+
+    filtered_data = {key: value < 20 for key, value in food_warehouse.items()}
+    return filtered_data
+
+filtered_data = warehouse()
+print(filtered_data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
